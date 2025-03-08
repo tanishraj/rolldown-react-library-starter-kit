@@ -1,0 +1,15 @@
+{
+  "name": "rolldown",
+  "version": "1.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts"
+  },
+  "devDependencies": {
+    "rolldown": "^1.0.0-beta.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
