@@ -1,10 +1,10 @@
 {
   "name": "rolldown-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "rolldown -c rolldown.config.ts"
+    "build": "rm -rf dist && rolldown -c rolldown.config.ts"
   },
   "devDependencies": {
     "rolldown": "^1.0.0-beta.3"
