@@ -1,4 +1,5 @@
 import { defineConfig } from "rolldown";
+import terser from "@rollup/plugin-terser";
 import packageJson from "./package.json";
 
 export default defineConfig([
@@ -18,6 +19,7 @@ export default defineConfig([
         sourcemap: true,
       },
     ],
+    plugins: [terser()],
     external: ["react", "react-dom", "react/jsx-runtime"],
   },
 ]);

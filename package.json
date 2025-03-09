@@ -14,6 +14,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/react": "^19.0.10",
     "rolldown": "^1.0.0-beta.3",
     "typescript": "^5.8.2"
