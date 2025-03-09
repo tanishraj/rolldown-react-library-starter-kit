@@ -1,28 +1,24 @@
 {
   "name": "rolldown-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && rolldown -c rolldown.config.ts",
+    "build": "rm -rf dist && rolldown -c rolldown.config.ts && tsc && cp -r dist/types/* types-package/",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/react": "^19.0.10",
     "rolldown": "^1.0.0-beta.3",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "tslib": "^2.8.1",
     "typescript": "^5.8.2"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.js",
-  "types": "./types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "type": "module",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ]
 }
