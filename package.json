@@ -2,8 +2,15 @@
   "name": "rolldown-react",
   "version": "1.1.1",
   "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rm -rf dist && rolldown -c rolldown.config.ts && tsc && cp -r dist/types/* types-package/",
+    "build": "rm -rf dist && rolldown -c rolldown.config.ts && tsc",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
@@ -14,11 +21,5 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "type": "module",
-  "files": [
-    "dist"
-  ]
+  }
 }

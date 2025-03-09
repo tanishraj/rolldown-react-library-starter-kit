@@ -7,7 +7,6 @@ export default defineConfig([
       {
         dir: "dist",
         format: "esm",
-        exports: "named",
       },
     ],
   },
