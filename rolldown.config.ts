@@ -1,4 +1,5 @@
 import { defineConfig } from "rolldown";
+import typescript from "rollup-plugin-typescript2";
 import terser from "@rollup/plugin-terser";
 import packageJson from "./package.json";
 
@@ -19,7 +20,15 @@ export default defineConfig([
         sourcemap: true,
       },
     ],
-    plugins: [terser()],
+    plugins: [
+      typescript({
+        tsconfig: "./tsconfig.json",
+        useTsconfigDeclarationDir: true,
+        clean: true,
+        check: true,
+      }),
+      terser(),
+    ],
     external: ["react", "react-dom", "react/jsx-runtime"],
   },
 ]);
